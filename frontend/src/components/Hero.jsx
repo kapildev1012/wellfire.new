@@ -139,7 +139,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 sm:mb-8 leading-tight"
+                  className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl text-center mb-6 sm:mb-8 max-w-7xl leading-tight"
                   style={{ textShadow: "4px 4px 8px rgba(0,0,0,0.8)" }}
                 >
                   WE DREAM WE CREATE WE PRESENT
@@ -148,7 +148,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-base sm:text-lg md:text-xl lg:text-lg text-center mb-6 sm:mb-8 max-w-3xl mx-auto"
+                  className=" sm:text-lg md:text-lg lg:text-sm text-center mb-6 sm:mb-10 max-w-6xl "
                   style={{ textShadow: "3px 3px 6px rgba(0,0,0,0.8)" }}
                 >
                   From concept to presentation, we are your partners in turning visions into reality.

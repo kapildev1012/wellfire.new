@@ -165,14 +165,14 @@ const AboutPreview = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 lg:px-12 xl:px-16 py-3 lg:py-0"
+        className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 lg:px-12 xl:px-16 py-1 lg:py-0"
       >
         {/* LEFT SIDE - Heading */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 lg:space-y-10 py- text-center lg:text-left order-1 lg:order-1 mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-4 lg:space-y-10 py-0 text-center lg:text-left order-1 lg:order-1 mt-4 lg:mt-0">
           {/* Synopsis Label */}
           <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
             <span 
-              className="inline-block text-4xl sm:text-7xl tracking-[0.2em] text-amber-100 py-6 lg:py-10 lg:pt-2 uppercase relative"
+              className="inline-block text-4xl sm:text-7xl tracking-[0.2em] text-amber-100 py-2 lg:py-10 lg:pt-2 uppercase relative"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               about us
@@ -198,7 +198,7 @@ const AboutPreview = () => {
           </motion.div>
 
           {/* View More Button */}
-          <motion.div variants={itemVariants} className="flex justify-center lg:justify-start pt-2 lg:pt-4 py-10 lg:pt-6">
+          <motion.div variants={itemVariants} className="flex justify-center lg:justify-start pt-1 lg:pt-4 py-4 lg:pt-6">
             <motion.button
               onClick={handleReadMore}
               whileHover={{ 
@@ -245,7 +245,7 @@ const AboutPreview = () => {
           {/* Stats Section */}
           <motion.div 
             variants={itemVariants}
-            className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8"
+            className="grid grid-cols-2 gap-4 lg:gap-6 mt-2 lg:mt-8"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -262,7 +262,7 @@ const AboutPreview = () => {
                 }}
               >
                 {/* Animated number */}
-                <div className="text-2xl lg:text-3xl font-bold text-amber-400 mb-1 lg:mb-2 transition-all duration-500 group-hover:text-amber-300 group-hover:scale-110">
+                <div className="text-2xl lg:text-3xl font-bold text-amber-400 mb-0.5 lg:mb-2 transition-all duration-500 group-hover:text-amber-300 group-hover:scale-110">
                   {animatedStats[index]}{stat.suffix}
                 </div>
                 {/* Label */}

@@ -13,11 +13,11 @@ const Home = () => {
 
   return (
     <div>
-      <div className="  ">
-        <Hero />
-      </div>
       
-      <div className="py-10 ">
+        <Hero />
+  
+      
+      <div className="py-2 sm:py-4 md:py-6 lg:py-10">
         <LatestCollection1 />
       </div>
       

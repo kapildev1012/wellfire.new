@@ -368,15 +368,15 @@ const CategoryShowcase = ({ category, title }) => {
 
   if (isLoading) {
     return (
-      <div className="w-full py-4 sm:py-0">
+      <div className="w-full py-1 sm:py-4">
         <motion.div
-          className="mb-6 sm:mb-6 px-2 sm:px-0"
+          className="mb-3 sm:mb-6 px-2 sm:px-0"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-2 sm:mb-4"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-1 sm:mb-4"
             style={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "800",
@@ -386,10 +386,10 @@ const CategoryShowcase = ({ category, title }) => {
           </h2>
         </motion.div>
 
-        <div className="w-full flex items-center justify-center rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 p-8 sm:p-8">
+        <div className="w-full flex items-center justify-center rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 p-4 sm:p-8">
           <div className="text-white text-center">
-            <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-white mx-auto mb-4 sm:mb-4"></div>
-            <p className="text-base sm:text-lg">Loading {title} products...</p>
+            <div className="animate-spin rounded-full h-6 w-6 sm:h-12 sm:w-12 border-b-2 border-white mx-auto mb-2 sm:mb-4"></div>
+            <p className="text-sm sm:text-lg">Loading {title} products...</p>
           </div>
         </div>
       </div>
@@ -398,16 +398,16 @@ const CategoryShowcase = ({ category, title }) => {
 
   if (categoryProducts.length === 0) {
     return (
-      <div className="w-full py-4 sm:py-0">
+      <div className="w-full py-1 sm:py-4">
         {/* Category Title */}
         <motion.div
-          className="mb-6 sm:mb-6 px-2 sm:px-0"
+          className="mb-3 sm:mb-6 px-2 sm:px-0"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-2 sm:mb-4"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-1 sm:mb-4"
             style={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "800",
@@ -418,14 +418,14 @@ const CategoryShowcase = ({ category, title }) => {
         </motion.div>
 
         <div
-          className="w-full flex items-center justify-center rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 p-8 sm:p-8"
+          className="w-full flex items-center justify-center rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 p-4 sm:p-8"
           style={{
             aspectRatio: isMobile ? "1/1.2" : "5/2",
             background: "rgba(0, 0, 0, 0.9)",
           }}
         >
           <p
-            className="text-white text-sm sm:text-lg"
+            className="text-white text-xs sm:text-lg"
             style={{ fontFamily: "Montserrat, sans-serif", fontWeight: "800" }}
           >
             No {title} products available
@@ -494,16 +494,16 @@ const CategoryShowcase = ({ category, title }) => {
   }
 
   return (
-    <div className="w-full lg:px-5">
+    <div className="w-full py-1 sm:py-4 lg:px-5">
       {/* Category Title with View All Button */}
       <motion.div
-        className="mb-6 sm:mb-6 flex justify-between items-center px-2 sm:px-0"
+        className="mb-3 sm:mb-6 flex justify-between items-center px-2 sm:px-0"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-2 sm:mb-4"
+          className="text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest text-white mb-1 sm:mb-4"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: "800",
@@ -530,9 +530,9 @@ const CategoryShowcase = ({ category, title }) => {
 
       {/* Main Content */}
       <div
-        className="w-full overflow-hidden relative rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 my-0 sm:my-0"
+        className="w-full overflow-hidden relative rounded-lg shadow-2xl border border-black mx-0.5 sm:mx-0 my-0"
         style={{
-          aspectRatio: isMobile ? "5/2" : "6/2",
+          aspectRatio: isMobile ? "5/5" : "5/2",
           background: "rgba(0, 0, 0, 0.9)",
         }}
       >
@@ -589,12 +589,11 @@ const CategoryShowcase = ({ category, title }) => {
                     <motion.div
                       className="flex flex-col gap-0"
                       animate={{
-                        y: ["0%", `-${Math.max(0, (rightProducts.length - 1)) * 20}%`, "0%"], // Prevent black screen at bottom
+                        y: ["0%", "-50%"], // Same as mobile pattern - simple infinite loop
                       }}
                       transition={{
-                        duration: rightProducts.length > 0 ? rightProducts.length * 3 : 6,
-                        ease: ["linear", "easeInOut"],
-                        times: [0, .8, 1], // 90% scroll, 10% return (no pause)
+                        duration: 15, // Same duration for all sections (Music, Film, Commercial) to ensure synchronized scroll speed
+                        ease: "linear", // Same as mobile - simple linear easing
                         repeat: Infinity,
                         repeatType: "loop",
                       }}
@@ -679,7 +678,7 @@ const CategoryShowcase = ({ category, title }) => {
                       y: [0, '-50%']
                     }}
                     transition={{
-                      duration: 10,
+                      duration: 15, // Same duration for all sections (Music, Film, Commercial) to ensure synchronized scroll speed
                       repeat: Infinity,
                       ease: "linear"
                     }}
@@ -711,20 +710,70 @@ const CategoryShowcase = ({ category, title }) => {
             )}
           </div>
         ) : (
-          /* Mobile Layout - Dynamic layout based on number of items */
-          <div className="flex h-full">
-            <div className="w-full h-full flex">
-              {/* For mobile, show up to 2 items side by side */}
+          /* Mobile Layout - Optimized 2 photos with smooth infinite scroll */
+          <div className="flex flex-col h-full">
+            {/* Upper Part - 2 Photos */}
+            <div className="w-full h-1/2 flex">
               {categoryProducts.slice(0, 2).map((product, index) => (
-                <div key={`mobile-${index}`} className="w-1/2 h-full">
+                <div key={`mobile-upper-${index}`} className="w-1/2 h-full">
                   <ProductCard
                     product={product}
                     className="w-full h-full"
-                    showTitle={true}
+                    showTitle={false}
                     isVertical={true}
                   />
                 </div>
               ))}
+            </div>
+            
+            {/* Lower Part - Smooth Infinite Loop */}
+            <div className="w-full h-2/3 overflow-hidden flex flex-col p-1 gap-1">
+              {categoryProducts.length > 2 ? (
+                <motion.div
+                  animate={{ y: ["0%", "-50%"] }}
+                  transition={{
+                    duration: 12, // Same duration for all sections (Music, Film, Commercial) to ensure synchronized scroll speed
+                    ease: "linear",
+                    repeat: Infinity,
+                    repeatType: "loop",
+                  }}
+                  className="flex flex-col"
+                >
+                  {categoryProducts
+                    .slice(2)
+                    .concat(categoryProducts.slice(2))
+                    .map((product, index) => (
+                      <div
+                        key={`mobile-loop-${index}`}
+                        className="flex-shrink-0"
+                      >
+                        <ProductVideoCard
+                          product={product}
+                          className="w-full"
+                          isYouTubeThumbnail={true}
+                          showTitle={false}
+                        />
+                      </div>
+                    ))}
+                </motion.div>
+              ) : (
+                <div
+                  className="w-full h-full flex items-center justify-center rounded"
+                  style={{
+                    background: "rgba(0, 0, 0, 0.7)",
+                  }}
+                >
+                  <p
+                    className="text-white text-xs text-center px-3 py-2"
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontWeight: "500",
+                    }}
+                  >
+                    More {title} coming soon...
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -758,10 +807,7 @@ const VerticalSplitShowcase = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden bg-black py-0 sm:pb-4">
-      {/* Mobile-Only Headline */}
-     
-
+    <div className="w-full min-h-screen relative overflow-hidden bg-black py-0">
       {/* Desktop Main Title */}
       {!isMobile && (
         <motion.div
@@ -771,7 +817,7 @@ const VerticalSplitShowcase = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-4xl  text-white mb-0"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-white mb-0"
             style={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "400",
@@ -782,19 +828,19 @@ const VerticalSplitShowcase = () => {
       )}
 
       {/* Content Container */}
-      <div className="relative z-10 px-6 sm:px-2 pb-4 sm:pb-6 space-y-12 sm:space-y-16">
+      <div className="relative z-10 px-6 sm:px-2 pb-0 sm:pb-6 space-y-6 sm:space-y-16">
         {/* Music Section */}
-        <div className="w-full">
+        <div className="w-full mobile-section-tight">
           <CategoryShowcase category="Music" title="MUSIC" />
         </div>
 
         {/* Film Section */}
-        <div className="w-full">
+        <div className="w-full mobile-section-tight">
           <CategoryShowcase category="Film" title="FILM" />
         </div>
 
         {/* Commercial Section */}
-        <div className="w-full">
+        <div className="w-full mobile-last-section">
           <CategoryShowcase category="Commercial" title="COMMERCIAL" />
         </div>
       </div>

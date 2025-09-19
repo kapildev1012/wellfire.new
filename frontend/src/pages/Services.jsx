@@ -201,7 +201,7 @@ const Services = () => {
           />
           
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/50" />
         </motion.div>
       </AnimatePresence>
 
@@ -226,9 +226,9 @@ const Services = () => {
       <div className={`relative z-10 ${currentProducts.length > 6 ? 'min-h-[30vh]' : 'min-h-[30vh]'} lg:h-full flex flex-col lg:flex-row px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 2xl:px-32 services-content mobile-padding`}>
         
         {/* Content Section */}
-        <div className="w-full lg:w-3/5 h-auto lg:h-full flex flex-col justify-between py-6 sm:py-8 md:py-10 lg:py-12 services-content-section">
+        <div className="w-full lg:w-3/5 h-auto lg:h-full flex flex-col justify-between py-2 sm:py-4 md:py-6 lg:py-12 services-content-section">
           {/* Header */}
-          <div className="flex justify-between items-start mb-6 sm:mb-8 lg:mb-0 services-header">
+          <div className="flex justify-between items-start mb-2 sm:mb-4 lg:mb-0 services-header">
             <motion.div
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ const Services = () => {
                 transition={{ duration: 0.8 }}
               >
                 <motion.h2
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white mb-4 sm:mb-6 md:mb-8 tracking-wide leading-tight hardware-accelerated"
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white mb-2 sm:mb-4 md:mb-6 tracking-wide leading-tight hardware-accelerated"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -279,7 +279,7 @@ const Services = () => {
                 </motion.h2>
                 
                 <motion.p
-                  className="text-white/90 text-sm sm:text-base md:text-lg xl:text-lg font-light leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-lg mobile-text-wrap"
+                  className="text-white/90 text-sm sm:text-base md:text-lg xl:text-lg font-light leading-relaxed mb-4 sm:mb-6 md:mb-8 max-w-lg mobile-text-wrap"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -289,7 +289,7 @@ const Services = () => {
 
                 {/* Mobile GET STARTED Button */}
                 <motion.div
-                  className="flex lg:hidden justify-center mb-6"
+                  className="flex lg:hidden justify-center mb-4"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
@@ -317,7 +317,7 @@ const Services = () => {
                       window.scrollTo(0, 0);
                       navigate('/contact');
                     }}
-                    className="bg-white text-black px-4 sm:px-6 xl:px-8 py-2.5 sm:py-3 text-sm md:text-base font-medium tracking-wide hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group touch-target btn-primary hardware-accelerated"
+                    className="bg-white text-black px-4 sm:px-6 xl:px-8 py-2.5 sm:py-3 text-sm hover:text-black md:text-base font-medium tracking-wide hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group touch-target btn-primary hardware-accelerated"
                   >
                     GET STARTED
                     <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
@@ -337,7 +337,7 @@ const Services = () => {
           </div>
 
           {/* Bottom Info */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 md:gap-6 mt-6 sm:mt-8 lg:mt-0 services-bottom-info">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 md:gap-6 mt-2 sm:mt-4 lg:mt-0 services-bottom-info">
           
 
             <motion.div
@@ -366,7 +366,7 @@ const Services = () => {
         </div>
 
         {/* Product Showcase Section */}
-        <div className="w-full lg:w-3/5 h-auto lg:h-full flex items-center justify-center lg:justify-end py-4 sm:py-6 lg:py-0 lg:pr-8 xl:pr-16 2xl:pr-24 services-showcase">
+        <div className="w-full lg:w-3/5 h-auto lg:h-full flex items-center justify-center lg:justify-end py-2 sm:py-4 lg:py-0 lg:pr-8 xl:pr-16 2xl:pr-24 services-showcase">
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md">
             <AnimatePresence mode="wait">
               <motion.div
@@ -448,7 +448,7 @@ const Services = () => {
                   </>
                 ) : (
                   <motion.div
-                    className="text-center py-8 sm:py-12 xl:py-16"
+                    className="text-center py-4 sm:py-8 xl:py-12"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                   >
