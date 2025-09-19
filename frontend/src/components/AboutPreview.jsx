@@ -87,7 +87,7 @@ const AboutPreview = () => {
   };
 
   const stats = [
-    { number: "500+", label: "Projects Completed", value: 500, suffix: "+" },
+    { number: "520+", label: "Projects Completed", value: 500, suffix: "+" },
     { number: "98%", label: "Client Satisfaction", value: 98, suffix: "%" },
     { number: "5+", label: "Years Experience", value: 5, suffix: "+" },
     { number: "24/7", label: "Support Available", value: 24, suffix: "/7" },
