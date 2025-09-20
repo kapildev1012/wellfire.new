@@ -10,7 +10,7 @@ const ShopContextProvider = ({ children }) => {
   const delivery_fee = 0;
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
-  const url ='https://wellfire-new-backend-1.onrender.com'
+  const url ="https://wellfire-new-backend-1.onrender.com"
   // 🔄 States
   const [token, setToken] = useState("");
   const [search, setSearch] = useState("");
@@ -240,4 +240,5 @@ const ShopContextProvider = ({ children }) => {
 };
 
 export default ShopContextProvider;
+
 
