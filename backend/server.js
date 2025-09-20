@@ -2,7 +2,8 @@ import cors from "cors";
 import "dotenv/config";
 import express from "express";
 import multer from "multer"; // Added missing import
-import connectCloudinary from "./config/Cloudinary.js";
+import connectCloudinary from "./config/cloudinary.js";
+
 import connectDB from "./config/mongodb.js";
 
 // Routes
